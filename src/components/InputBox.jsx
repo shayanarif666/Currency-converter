@@ -19,13 +19,6 @@ function InputBox({
                 </div>
                 <div className="currency">
                     <label htmlFor="" className='d-block text-end mb-2 fw-bold'>Currency Type</label>
-                    {/* <select name="" value={defaultCurrency} defaultValue={defaultCurrency} className='form-select' id="currencyOptions" onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}>
-                        {
-                            currencyOptions.slice(7).map((currency, index) => {
-                                return <option key={currency} value={currency}>{currency}</option>
-                            })
-                        }
-                    </select> */}
                     <Box>
                         <FormControl>
                             <InputLabel id="demo-simple-select-label">Currency</InputLabel>

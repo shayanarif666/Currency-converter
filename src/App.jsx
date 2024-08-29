@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { lazy, useEffect, useMemo, useState } from 'react'
 import './App.css'
-import useCurrencyApi from './hooks/useCurrencyApi'
+import useCurrencyApi from './hooks/useCurrencyApi';
 import { Button, InputBox } from './components/index';
 import { FaArrowsRotate } from "react-icons/fa6";
 
 function App() {
 
-  const [amount, setAmount] = useState(2);
-  const [convertedAmount, setConvertedAmount] = useState(0);
+  const [amount, setAmount] = useState(0);
   const [from, setFrom] = useState("inr");
   const [to, setTo] = useState("pkr");
 
@@ -17,15 +16,16 @@ function App() {
   // Get All Keys inside object
   const options = Object.keys(data);
 
-  useEffect(() => {
-    console.log(loading);
-  }, [amount, data])
-
   // Swipping Values
   const handleSwip = () => {
     setFrom(to);
     setTo(from);
   }
+
+  // Amount Calculation
+  const handleCalculatedAmount = useMemo(() => {
+    return (amount * data[to]).toFixed(2);
+  }, [amount, from, to, data]);
 
   return (
     <section id='currencyConverter'>
@@ -50,9 +50,8 @@ function App() {
           />
           <InputBox
             label={"To"}
-            amount={(amount * data[to]).toFixed(2)}
+            amount={handleCalculatedAmount}
             currencyOptions={options}
-            currencyAmount={convertedAmount}
             defaultCurrency={to}
             onCurrencyChange={(currency) => setTo(currency)}
             disabled={true}
