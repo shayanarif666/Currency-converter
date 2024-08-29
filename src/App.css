@@ -5,10 +5,6 @@ body {
     background-position: center;
 }
 
-/* Select Component */
-.css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select {
-    width: 150px;
-}
 
 #heading {
     color: rgb(0, 104, 208);

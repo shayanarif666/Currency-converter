@@ -33,6 +33,7 @@ function InputBox({
                                 labelId="demo-simple-select-label"
                                 id="demo-simple-select"
                                 value={defaultCurrency}
+                                style={{ width: "150px" }}
                                 label="Age"
                                 onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
                             >
