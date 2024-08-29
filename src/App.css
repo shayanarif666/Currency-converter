@@ -1,0 +1,68 @@
+body {
+    background: url('https://c8.alamy.com/comp/GDJPF4/abstract-finance-world-currency-background-GDJPF4.jpg');
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Select Component */
+.css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select {
+    width: 150px;
+}
+
+#heading {
+    color: rgb(0, 104, 208);
+    text-align: center;
+
+}
+#currencyConverter {
+    height: 90vh;
+    width: 100vw;
+}
+#currencyConverter .custom-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+#currencyConverter .currency-content {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0%;
+    padding: 1rem;
+}
+#currencyConverter #amount {
+    border-radius: 0%;
+    border: none !important;
+}
+#currencyConverter #amount:focus {
+    box-shadow: none !important;
+}
+#currencyConverter #currencyOptions {
+    width: 200px;
+    border-radius: 0% !important;
+}
+#currencyConverter #currencyOptions:focus {
+    box-shadow: none !important;
+}
+#currencyConverter .btn-main {
+    background-color: rgb(0, 128, 255);
+    border-radius: 0%;
+    color: #fff;
+    margin: 1rem 0;
+}
+#currencyConverter .btn-main:hover {
+    background-color: rgb(0, 104, 208);
+}
+#currencyText {
+    background-color: rgb(52, 153, 253);
+    font-weight: 600;
+    display: block;
+    margin-top: 1rem;
+    padding: .7rem;
+    text-align: center;
+    color: #fff;
+}
